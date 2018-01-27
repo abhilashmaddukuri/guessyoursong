@@ -1,8 +1,9 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
 
     defaultConfig {
         applicationId "com.guessursongs"
@@ -18,8 +19,13 @@ android {
     }
 }
 dependencies {
-    compile 'com.android.support:appcompat-v7:27.0.2'
-    compile 'com.android.support:support-v4:27.0.2'
+
+    implementation 'com.google.firebase:firebase-crash:11.8.0'
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support:support-v4:26.0.2'
+
     compile 'com.google.android.gms:play-services-games:11.8.0'
     compile 'com.google.android.gms:play-services-ads:11.8.0'
 }
+
+apply plugin: 'com.google.gms.google-services'
