@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "351477473081",
+    "firebase_url": "https://guessyoursong.firebaseio.com",
+    "project_id": "guessyoursong",
+    "storage_bucket": "guessyoursong.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351477473081:android:1c744aa5b0923b75",
+        "android_client_info": {
+          "package_name": "com.guessursongs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "351477473081-h3bkaqok6u9994aurimt6aeoccjbtstc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.guessursongs",
+            "certificate_hash": "64f4cefdd5aed5e1c5d6bbb83740fc0c9efc6ee6"
+          }
+        },
+        {
+          "client_id": "351477473081-243506saivs28p1s68kmq3mfml2s5cld.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEQzAx5sWIsGHSFRMGYdbJ_7GznTC1bbw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "351477473081-243506saivs28p1s68kmq3mfml2s5cld.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
