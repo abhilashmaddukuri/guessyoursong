@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:circular="http://schemas.android.com/apk/res/com.example.circleseek.example"
+   xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.circleseek.CircularSeekBar"
+  	 android:background="@drawable/background"
+     >
+       <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:textSize="35dp"
+        android:textColor="#000000" 
+        android:layout_centerHorizontal="true"
+        android:text="Sequence"
+        />
+       
+
+    
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hidden_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="50dp"
+     android:layout_below="@+id/heading" >
+    
+    
+      <RelativeLayout
+          android:id="@+id/relative_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+         android:src="@drawable/relative_one" 
+        >   
+      
+          <ImageButton
+    android:id="@+id/memory_normal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:duplicateParentState="true"
+    android:src="@drawable/relative_one"
+     android:background="@null"
+    />
+      
+        	<TextView
+        android:id="@+id/memory_normal_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/memory_normal"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+ 		android:textSize="25dp"
+ 		android:textColor="#000000"
+ 		android:text="Easy"
+ 		android:fontFamily="sans-serif-condensed italic" 
+       />
+    
+    		
+    </RelativeLayout>
+    
+    
+    
+     
+     <View
+        android:id="@+id/line_viewthree"
+	android:layout_width="280dp"
+ 	android:layout_height="0.5dp"
+ 	android:background="#000000"
+ 	 android:layout_centerHorizontal="true"
+    android:layout_below="@+id/memory_normal"
+     android:layout_marginLeft="40dp"
+    android:layout_marginTop="20dp" />
+  
+     <RelativeLayout
+          android:id="@+id/relative_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+		android:layout_marginLeft="40dp"
+       	 android:src="@drawable/relative_two" 
+        >   
+      
+          <ImageButton
+    android:id="@+id/memory_hard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:duplicateParentState="true"
+     android:src="@drawable/relative_two" 
+     android:background="@null"
+    />
+      
+        	<TextView
+        android:id="@+id/memory_hard_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/memory_hard"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+ 		android:textSize="25dp"
+ 		android:text="Hard"
+ 		android:textColor="#000000"
+ 		android:fontFamily="sans-serif-condensed italic" 
+       />
+    
+    		
+    </RelativeLayout>
+     
+     
+      <View
+        android:id="@+id/line_viewone"
+	android:layout_width="280dp"
+ 	android:layout_height="0.5dp"
+ 	android:background="#000000"
+ 	 android:layout_centerHorizontal="true"
+    android:layout_below="@+id/memory_hard"
+     android:layout_marginLeft="40dp"
+    android:layout_marginTop="20dp" />
+  
+     
+      <RelativeLayout
+          android:id="@+id/relative_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+         android:src="@drawable/relative_three" 
+        >   
+      
+          <ImageButton
+    android:id="@+id/memory_insane"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:duplicateParentState="true"
+     android:src="@drawable/relative_three" 
+     android:background="@null"
+    />
+      
+        	<TextView
+        android:id="@+id/memory_insane_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/memory_insane"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+ 		android:textSize="25dp"
+ 		android:text="Insane"
+ 		android:textColor="#000000"
+ 		android:fontFamily="sans-serif-condensed italic" 
+       />
+    
+    		
+    </RelativeLayout>
+      
+   
+	  <RelativeLayout
+          android:id="@+id/relative_four"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        >   
+      
+  <Button
+        android:id="@+id/guide"
+        android:layout_width="140dp"
+        android:layout_height="37dp"
+         android:textSize="12dp"
+            android:textColor="#0D0C0C"
+    android:background="@drawable/button_scoreboard"
+    android:text="Guide"
+        /> 
+</RelativeLayout>
+  
+</LinearLayout>
+<com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>

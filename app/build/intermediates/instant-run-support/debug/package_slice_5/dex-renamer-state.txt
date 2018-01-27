@@ -1,0 +1,4 @@
+#Thu Jan 25 18:50:18 IST 2018
+base.0=D\:\\Android Workspace\\circleseek\\Guess_ur_song\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex

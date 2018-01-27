@@ -1,0 +1,506 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-games:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-11.8.0.aar\abede8369c6dda55279ab0b461cefc92\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-ads:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.8.0.aar\99c003d7aa4fb6eea35409683bd5cbe8\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.8.0.aar\15c069477af0fa6816d9fc89ccc4776c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\df479e1b80e882aa4127e4fa208b6065\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.android.gms:play-services-gass:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.8.0.aar\45e06337d252a130e38e6134af213edc\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.8.0.aar\0b01c21636160aa39459850f6c375cea\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-ads-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-license-11.8.0.aar\1309b9ef11c9cb5242ddb3b4fc3f8f42\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\4ddb55060c111b0adefbcf25a5db2262\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\ab3b05f5d3576c7452649ae692f2e424\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.8.0.aar\faf33574990db8f88cd4402f8a8fa746\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\9d21f069d795645ce8bc8d360f4191fc\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-license-11.8.0.aar\bfe8c56c1e024ea86f14b4817d67f566\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-gass-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-license-11.8.0.aar\2f10dfaf57b7d14b08ea1bde02927567\AndroidManifest.xml:2:1-6:12
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:1-183:12
+	package
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:3:5-31
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:4:5-29
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:7:22-77
+uses-permission#android.permission.INTERNET
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:9:5-71
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:9:22-68
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:10:22-72
+uses-permission#android.permission.USE_CREDENTIALS
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:11:5-74
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:11:22-71
+uses-permission#android.permission.VIBRATE
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:12:22-63
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:13:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:24:5-79
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:13:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:14:22-78
+uses-sdk
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:16:5-18:41
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:16:5-18:41
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:16:5-18:41
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:21:5-23:78
+MERGED from [com.google.android.gms:play-services-games:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-11.8.0.aar\abede8369c6dda55279ab0b461cefc92\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-games:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-11.8.0.aar\abede8369c6dda55279ab0b461cefc92\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.8.0.aar\99c003d7aa4fb6eea35409683bd5cbe8\AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.android.gms:play-services-ads:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-11.8.0.aar\99c003d7aa4fb6eea35409683bd5cbe8\AndroidManifest.xml:21:5-23:62
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.8.0.aar\15c069477af0fa6816d9fc89ccc4776c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.8.0.aar\15c069477af0fa6816d9fc89ccc4776c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\df479e1b80e882aa4127e4fa208b6065\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\df479e1b80e882aa4127e4fa208b6065\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-gass:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.8.0.aar\45e06337d252a130e38e6134af213edc\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-gass:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.8.0.aar\45e06337d252a130e38e6134af213edc\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.8.0.aar\0b01c21636160aa39459850f6c375cea\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.8.0.aar\0b01c21636160aa39459850f6c375cea\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-license-11.8.0.aar\1309b9ef11c9cb5242ddb3b4fc3f8f42\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-license-11.8.0.aar\1309b9ef11c9cb5242ddb3b4fc3f8f42\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\4ddb55060c111b0adefbcf25a5db2262\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\4ddb55060c111b0adefbcf25a5db2262\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\ab3b05f5d3576c7452649ae692f2e424\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\ab3b05f5d3576c7452649ae692f2e424\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.8.0.aar\faf33574990db8f88cd4402f8a8fa746\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.8.0.aar\faf33574990db8f88cd4402f8a8fa746\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\9d21f069d795645ce8bc8d360f4191fc\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\9d21f069d795645ce8bc8d360f4191fc\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-license-11.8.0.aar\bfe8c56c1e024ea86f14b4817d67f566\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-license-11.8.0.aar\bfe8c56c1e024ea86f14b4817d67f566\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-gass-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-license-11.8.0.aar\2f10dfaf57b7d14b08ea1bde02927567\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-gass-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-license-11.8.0.aar\2f10dfaf57b7d14b08ea1bde02927567\AndroidManifest.xml:4:5-43
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:16:5-18:41
+INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:16:5-18:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:18:9-38
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:17:9-35
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml
+application
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:20:5-181:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-games:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-11.8.0.aar\abede8369c6dda55279ab0b461cefc92\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-games:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-11.8.0.aar\abede8369c6dda55279ab0b461cefc92\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.8.0.aar\15c069477af0fa6816d9fc89ccc4776c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-drive:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-11.8.0.aar\15c069477af0fa6816d9fc89ccc4776c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\df479e1b80e882aa4127e4fa208b6065\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-11.8.0.aar\df479e1b80e882aa4127e4fa208b6065\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-gass:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.8.0.aar\45e06337d252a130e38e6134af213edc\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-gass:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-11.8.0.aar\45e06337d252a130e38e6134af213edc\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:25:5-29:19
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.8.0.aar\0b01c21636160aa39459850f6c375cea\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-games-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-games-license-11.8.0.aar\0b01c21636160aa39459850f6c375cea\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-license-11.8.0.aar\1309b9ef11c9cb5242ddb3b4fc3f8f42\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-license-11.8.0.aar\1309b9ef11c9cb5242ddb3b4fc3f8f42\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\4ddb55060c111b0adefbcf25a5db2262\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-license-11.8.0.aar\4ddb55060c111b0adefbcf25a5db2262\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\ab3b05f5d3576c7452649ae692f2e424\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-license-11.8.0.aar\ab3b05f5d3576c7452649ae692f2e424\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.8.0.aar\faf33574990db8f88cd4402f8a8fa746\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-drive-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-drive-license-11.8.0.aar\faf33574990db8f88cd4402f8a8fa746\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\9d21f069d795645ce8bc8d360f4191fc\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-tasks-license-11.8.0.aar\9d21f069d795645ce8bc8d360f4191fc\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-license-11.8.0.aar\bfe8c56c1e024ea86f14b4817d67f566\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-ads-lite-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-license-11.8.0.aar\bfe8c56c1e024ea86f14b4817d67f566\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-gass-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-license-11.8.0.aar\2f10dfaf57b7d14b08ea1bde02927567\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-gass-license:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-gass-license-11.8.0.aar\2f10dfaf57b7d14b08ea1bde02927567\AndroidManifest.xml:5:5-20
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:23:9-41
+	android:icon
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:22:9-45
+	android:allowBackup
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:21:9-35
+	android:theme
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:24:9-40
+meta-data#com.google.android.gms.games.APP_ID
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:26:9-28:46
+	android:value
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:28:13-43
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:27:13-63
+meta-data#com.google.android.gms.version
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:29:9-31:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-basement-11.8.0.aar\83cebf82064f98f5ef06d9647ee889b9\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:31:13-66
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:30:13-58
+activity#com.example.circleseek.Activities.MenuSelectionActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:34:9-44:20
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:38:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:36:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:35:13-83
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:39:13-43:29
+action#android.intent.action.MAIN
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:40:17-69
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:40:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:42:17-77
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:42:27-74
+activity#com.google.android.gms.ads.AdActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:47:9-50:64
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:29:9-33:64
+MERGED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:29:9-33:64
+	android:exported
+		ADDED from [com.google.android.gms:play-services-ads-lite:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-ads-lite-11.8.0.aar\da76b8d24477a910483f33754b5b6c68\AndroidManifest.xml:32:13-37
+	android:configChanges
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:49:13-122
+	android:theme
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:50:13-61
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:48:13-65
+activity#com.example.circleseek.Activities.PracticeActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:52:9-57:20
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:55:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:54:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:53:13-78
+activity#com.example.circleseek.Activities.ChallengeLevelActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:59:9-65:20
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:63:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:61:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:60:13-84
+activity#com.example.circleseek.Activities.ChallengeGuideActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:66:9-69:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:69:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:68:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:67:13-84
+activity#com.example.circleseek.Activities.ErrorCatchingActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:71:9-74:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:74:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:73:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:72:13-83
+activity#com.example.circleseek.Activities.MemoryLevelActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:76:9-79:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:79:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:78:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:77:13-81
+activity#com.example.circleseek.Activities.MemoryGuideActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:81:9-84:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:84:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:83:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:82:13-81
+activity#com.example.circleseek.Activities.ChallengeNormalActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:85:9-88:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:88:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:87:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:86:13-85
+activity#com.example.circleseek.Activities.ChallengeNormalScoreboardActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:91:9-94:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:94:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:93:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:92:13-95
+activity#com.example.circleseek.Activities.ChallengeHardActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:95:9-98:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:98:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:97:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:96:13-83
+activity#com.example.circleseek.Activities.ChallengehardScoreboardActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:99:9-102:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:102:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:101:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:100:13-93
+activity#com.example.circleseek.Activities.ChallengeInsaneActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:103:9-106:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:106:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:105:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:104:13-85
+activity#com.example.circleseek.Activities.ChallengeInsaneScoreboardActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:107:9-110:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:110:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:109:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:108:13-95
+activity#com.example.circleseek.Activities.MemoryHardActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:111:9-114:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:114:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:113:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:112:13-80
+activity#com.example.circleseek.Activities.MemoryHardOptionsActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:115:9-118:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:118:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:117:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:116:13-87
+activity#com.example.circleseek.Activities.MemoryHardScoreActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:119:9-122:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:122:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:121:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:120:13-85
+activity#com.example.circleseek.Activities.MemoryInsaneActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:123:9-126:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:126:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:125:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:124:13-82
+activity#com.example.circleseek.Activities.MemoryInsaneOptionsActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:127:9-130:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:130:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:129:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:128:13-89
+activity#com.example.circleseek.Activities.MemoryInsaneScoreActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:131:9-134:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:134:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:133:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:132:13-87
+activity#com.example.circleseek.Activities.MemoryInsaneplusActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:136:9-139:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:139:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:138:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:137:13-86
+activity#com.example.circleseek.Activities.MemoryInsaneplusOptionsActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:140:9-143:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:143:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:142:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:141:13-93
+activity#com.example.circleseek.Activities.MemoryInsaneplusScoreActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:144:9-147:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:147:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:146:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:145:13-91
+activity#com.example.circleseek.memory_options
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:148:9-151:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:151:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:150:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:149:13-65
+activity#com.example.circleseek.memory_score
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:152:9-155:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:155:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:154:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:153:13-63
+activity#com.example.circleseek.Activities.ScoreBoardActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:156:9-159:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:159:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:158:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:157:13-80
+activity#com.example.circleseek.Activities.MemoryNormalAfterNextActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:161:9-164:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:164:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:163:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:162:13-91
+activity#com.example.circleseek.Activities.MemoryHardAfterNextActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:166:9-169:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:169:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:168:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:167:13-89
+activity#com.example.circleseek.Activities.MemoryInsaneAfterNextActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:171:9-174:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:174:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:173:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:172:13-91
+activity#com.example.circleseek.Activities.MemoryInsaneplusAfterNextActivity
+ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:176:9-179:61
+	android:screenOrientation
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:179:13-49
+	android:label
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:178:13-45
+	android:name
+		ADDED from D:\Android Workspace\Guessursong\guessyoursong\app\src\main\AndroidManifest.xml:177:13-95
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-v4-26.0.2.aar\f46fc47ad204d29375f598c1206ed189\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.0.2.aar\93a302bd2c4a747444a99b88af239cfd\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.0.2.aar\70b116a9d61cd8d3378a8ef88d376968\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-fragment-26.0.2.aar\12791e6ef64e6b71cd5b7ebcfe72be69\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.0.2.aar\24851c3afb085f76948f5068b0cd06b0\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.0.2.aar\c0a361582829658ca2a7c632ec8cd8c4\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.0.2.aar\10078ee96c99e5736292bcab5711951e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\support-compat-26.0.2.aar\f5a873f26e23442b47df9cae527f119f\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.0.2] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.2.aar\81951e0381b5441b2df208fb48601395\AndroidManifest.xml:27:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] C:\Users\Viyatra\.gradle\caches\transforms-1\files-1.1\play-services-base-11.8.0.aar\d7898f9f4f25a759703f5d781f8b7709\AndroidManifest.xml:24:13-79

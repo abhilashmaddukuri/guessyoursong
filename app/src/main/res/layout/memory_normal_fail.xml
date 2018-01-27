@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+     >
+ <TextView
+ 		android:textStyle="bold|italic"
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+       
+       />
+ 
+ <TextView android:id="@+id/correct_order" 
+               android:layout_width="wrap_content" 
+               android:layout_height="wrap_content" 
+     		    android:layout_marginLeft="30dip"
+         	   android:layout_marginTop="50dip"
+               android:textSize="25dp"
+               android:textStyle="bold|italic"
+               android:layout_below="@+id/heading"
+               android:text="Correct Order is:" />
+ 
+ 
+ <LinearLayout 
+        android:id="@+id/linear_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      	android:layout_below="@+id/correct_order"
+		 android:layout_marginTop="40dip"
+		 android:orientation="vertical"
+		android:layout_marginLeft="60dp"
+    > 
+ 
+<TextView
+        android:id="@+id/option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/heading"
+    	 android:layout_marginTop="30dip"	 
+        />
+<TextView
+        android:id="@+id/option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        
+        android:layout_below="@+id/option1"
+    	 android:layout_marginTop="15dip"	 
+        />
+
+ </LinearLayout>
+ 
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_below="@+id/linear_buttons"
+    android:gravity="bottom|center_horizontal"
+    
+   >
+
+     <Button
+        android:id="@+id/next"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:textSize="12dp" 
+        android:textColor="#0D0C0C"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_scoreboard"
+        android:text="Next"
+        />     
+
+   </LinearLayout>
+
+</RelativeLayout>
