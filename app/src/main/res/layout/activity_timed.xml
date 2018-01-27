@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="Timed"
         android:textColor="#000000"
         android:textSize="35dp" />
@@ -142,22 +143,17 @@
         </RelativeLayout>
 
 
-        <RelativeLayout
-            android:id="@+id/relative_four"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/guide"
+            android:layout_width="140dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="50dp"
-            android:gravity="center">
+            android:background="@drawable/button_scoreboard"
+            android:text="Guide"
+            android:textColor="@android:color/white"
+            android:textSize="12dp" />
 
-            <Button
-                android:id="@+id/guide"
-                android:layout_width="140dp"
-                android:layout_height="37dp"
-                android:background="@drawable/button_scoreboard"
-                android:text="Guide"
-                android:textColor="#0D0C0C"
-                android:textSize="12dp" />
-        </RelativeLayout>
 
     </LinearLayout>
 

@@ -150,9 +150,9 @@ public class ChallengeInsaneActivity extends Activity implements View.OnClickLis
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
-		setContentView(R.layout.activity_main);
+
+
+        setContentView(R.layout.activity_game);
 //		getGameHelper().setMaxAutoSignInAttempts(0);
 		PhoneStateListener phoneStateListener = new PhoneStateListener() {
 		    @Override
@@ -163,9 +163,9 @@ public class ChallengeInsaneActivity extends Activity implements View.OnClickLis
 					countDownTimer.cancel();
 					cntr_aCounter.cancel();	
 					 mp.stop();
-					 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-			
-			           startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+
+                    startActivity(i);
 			           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			
 		        } else if(state == TelephonyManager.CALL_STATE_IDLE) {
@@ -175,9 +175,9 @@ public class ChallengeInsaneActivity extends Activity implements View.OnClickLis
 					countDownTimer.cancel();
 					cntr_aCounter.cancel();	
 					 mp.stop();
-					 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-			
-			           startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+
+                    startActivity(i);
 			           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);	        	//A call is dialing, active or on hold
 		        }
 		        super.onCallStateChanged(state, incomingNumber);
@@ -434,9 +434,9 @@ public class ChallengeInsaneActivity extends Activity implements View.OnClickLis
 				countDownTimer.cancel();
 				cntr_aCounter.cancel();	
 				 mp.stop();
-				 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-		
-		           startActivity(i);
+                Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+
+                startActivity(i);
 		           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 						// Changing button image to play button
 						//btnPlay.setImageResource(R.drawable.btn_stop);
@@ -463,7 +463,7 @@ public class ChallengeInsaneActivity extends Activity implements View.OnClickLis
 		// mp = null;
 		 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
  	    mp.start();
-		 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
+        Intent i = new Intent(getApplicationContext(), TimedActivity.class);
 
            startActivity(i);
            overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);

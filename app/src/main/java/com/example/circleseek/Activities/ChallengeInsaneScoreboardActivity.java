@@ -159,7 +159,7 @@ public class ChallengeInsaneScoreboardActivity extends Activity
 			// mp = null;
 			MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
     	    mp.start();
-			 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
+            Intent i = new Intent(getApplicationContext(), TimedActivity.class);
 
 	           startActivity(i);
 	           overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);

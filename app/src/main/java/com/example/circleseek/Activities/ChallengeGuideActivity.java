@@ -55,8 +55,8 @@ public class ChallengeGuideActivity extends Activity
 				        public void onClick(View v) {
 				        	MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
 		            	    mp.start();
-				        	 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-			                 //   f i.putExtra("id", position);
+                            Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+                            //   f i.putExtra("id", position);
 			                     startActivity(i);
 			                     overridePendingTransition(R.anim.left_in, R.anim.right_out);
 			            	 
@@ -71,7 +71,7 @@ public class ChallengeGuideActivity extends Activity
 		{
 			MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
     	    mp.start();
-			 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
+            Intent i = new Intent(getApplicationContext(), TimedActivity.class);
 
 	           startActivity(i);
 	           overridePendingTransition(R.anim.left_in, R.anim.right_out);

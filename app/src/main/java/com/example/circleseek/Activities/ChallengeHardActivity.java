@@ -154,10 +154,10 @@ public Animation anim_score, bounce;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
-		setContentView(R.layout.activity_main);
-		PhoneStateListener phoneStateListener = new PhoneStateListener() {
+
+
+        setContentView(R.layout.activity_game);
+        PhoneStateListener phoneStateListener = new PhoneStateListener() {
 		    @Override
 		    public void onCallStateChanged(int state, String incomingNumber) {
 		        if (state == TelephonyManager.CALL_STATE_RINGING) {
@@ -166,9 +166,9 @@ public Animation anim_score, bounce;
 					countDownTimer.cancel();
 					cntr_aCounter.cancel();	
 					 mp.stop();
-					 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-			
-			           startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+
+                    startActivity(i);
 			           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			           mp.stop();
 			
@@ -179,9 +179,9 @@ public Animation anim_score, bounce;
 					countDownTimer.cancel();
 					cntr_aCounter.cancel();	
 					 mp.stop();
-					 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-			
-			           startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+
+                    startActivity(i);
 			           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			           mp.stop();		        	//A call is dialing, active or on hold
 		        }
@@ -439,9 +439,9 @@ public Animation anim_score, bounce;
 				countDownTimer.cancel();
 				cntr_aCounter.cancel();	
 				 mp.stop();
-				 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
-		
-		           startActivity(i);
+                Intent i = new Intent(getApplicationContext(), TimedActivity.class);
+
+                startActivity(i);
 		           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 		           mp.stop();
 		           // Changing button image to play button
@@ -468,7 +468,7 @@ public Animation anim_score, bounce;
 		// mp = null;
 		 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
  	    mp.start();
-		 Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
+        Intent i = new Intent(getApplicationContext(), TimedActivity.class);
 
            startActivity(i);
            overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);

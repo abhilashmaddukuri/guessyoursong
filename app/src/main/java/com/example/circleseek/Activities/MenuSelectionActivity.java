@@ -219,7 +219,7 @@ public class MenuSelectionActivity extends Activity implements View.OnClickListe
                 //challenge_button.animate().x(0).y(1);
                 // challenge_button.animate().x(0).y(0);
                 //challenge_button.animate().alpha(0);
-                Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
+                Intent i = new Intent(getApplicationContext(), TimedActivity.class);
                 //  i.putExtra("id", position);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

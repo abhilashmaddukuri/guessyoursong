@@ -1,15 +1,22 @@
 package com.example.circleseek.Activities;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
@@ -25,7 +32,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.games.Games;
 import com.guessursongs.R;
 
-public class HomeActivity extends Activity implements View.OnClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class HomeActivity extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     public GoogleApiClient mGoogleApiClient;
     private int x = 0;
     private static int RC_SIGN_IN = 9001;
@@ -47,11 +54,13 @@ public class HomeActivity extends Activity implements View.OnClickListener, Goog
     private TextView endless_text;
     private TextView sequence_text;
     private TextView leaderboard_text;
+    String[] perms = {"android.permission.READ_EXTERNAL_STORAGE", "android.permission.READ_PHONE_STATE"};
+    private static final int PERMISSION_REQUEST_CODE = 200;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_selection);
+        setContentView(R.layout.activity_home);
         mContext = HomeActivity.this;
         scount = this.getSharedPreferences("count", Context.MODE_PRIVATE);
         testing = scount.getInt("testing", 5);
@@ -77,6 +86,72 @@ public class HomeActivity extends Activity implements View.OnClickListener, Goog
         setAnimations();
         onClicks();
         loadAds();
+
+        addRunTimePermission();
+    }
+
+    private void addRunTimePermission() {
+        if (!checkPermission()) {
+            requestPermission();
+        }
+    }
+
+    private void requestPermission() {
+        ActivityCompat.requestPermissions(this, new String[]{perms[0], perms[1]}, PERMISSION_REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_CODE:
+                if (grantResults.length > 0) {
+                    boolean isReadExternalStorageAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                    boolean isReadPhoneStateAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+                    if (isReadExternalStorageAccepted && isReadPhoneStateAccepted) {
+                        Toast.makeText(mContext, "All permissions accepted", Toast.LENGTH_SHORT).show();
+                    } else {
+                        /*if (shouldShowRequestPermissionRationale(perms[0])) {
+                            showMessageOKCancel("You need to allow access to both the permissions",
+                                    new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                                requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA},
+                                                        PERMISSION_REQUEST_CODE);
+                                            }
+                                        }
+                                    });
+                            return;
+                        }*/
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                            requestPermissions(new String[]{perms[0], perms[1]},
+                                    PERMISSION_REQUEST_CODE);
+                        }
+                    }
+                }
+                break;
+        }
+    }
+
+    private boolean checkPermission() {
+        if (Build.VERSION.SDK_INT < 23) {
+            return true;
+        } else {
+            int result = ContextCompat.checkSelfPermission(getApplicationContext(), perms[0]);
+            int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), perms[1]);
+
+            /*if (result != PackageManager.PERMISSION_GRANTED) {
+                if (shouldShowRequestPermissionRationale(perms[0])){
+
+                }
+            }
+
+            if(result1 != PackageManager.PERMISSION_GRANTED){
+
+            }*/
+
+            return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
+        }
     }
 
     private void loadAds() {
@@ -117,7 +192,7 @@ public class HomeActivity extends Activity implements View.OnClickListener, Goog
             public void onClick(View arg0) {
                 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
                 mp.start();
-                Intent i = new Intent(getApplicationContext(), ChallengeLevelActivity.class);
+                Intent i = new Intent(getApplicationContext(), TimedActivity.class);
                 startActivity(i);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
@@ -277,9 +352,5 @@ public class HomeActivity extends Activity implements View.OnClickListener, Goog
             } else {
             }
         }
-    }
-
-    @Override
-    public void onClick(View v) {
     }
 }
