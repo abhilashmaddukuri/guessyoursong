@@ -4,19 +4,19 @@
     <string name="app_name">Guess Your Song</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-	<string name="button_text">Challenge</string>
-	<string name="challenge_button">Challenge</string>
-	<string name="normal">Normal</string>
-	<string name="hard">Hard</string>
-	<string name="insane">Insane</string>
-	<string name="memory_button">Memory Challenge</string>
-	<string name="memory_fail">Soryy .. failed to answer correctly</string>
-	<string name="banner_ad_unit_id">ca-app-pub-2293516715213176/6934913641</string>
-	<string name="interstitial_ad_unit_id">ca-app-pub-2293516715213176/5262717248</string>
-	<string name="app_id">926740730901</string>
-<string name="leaderboard_id">CgkIlai1sPwaEAIQAQ</string>
-<string name="signin_other_error">There was an issue with sign-in. Please try again later.</string>	
-<string name="signin_failure">Unable to sign in.</string>
-<string name="heading_main">Guess your song default</string>	
+    <string name="button_text">Challenge</string>
+    <string name="challenge_button">Challenge</string>
+    <string name="normal">Normal</string>
+    <string name="hard">Hard</string>
+    <string name="insane">Insane</string>
+    <string name="memory_button">Memory Challenge</string>
+    <string name="memory_fail">Soryy .. failed to answer correctly</string>
+    <string name="banner_ad_unit_id">ca-app-pub-2293516715213176/6934913641</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-2293516715213176/5262717248</string>
+    <string name="app_id">926740730901</string>
+    <string name="leaderboard_id">CgkIlai1sPwaEAIQAQ</string>
+    <string name="signin_other_error">There was an issue with sign-in. Please try again later.</string>
+    <string name="signin_failure">Unable to sign in.</string>
+    <string name="heading_main">Guess your song default</string>
 </resources>
 
