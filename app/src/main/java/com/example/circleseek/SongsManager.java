@@ -1,6 +1,9 @@
 package com.example.circleseek;
 
+import android.content.Context;
+import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
 
@@ -24,6 +27,7 @@ public class SongsManager {
     final String MEDIA_PATH_EXTERNAL_SAMSUNG_ALT2 = Environment.getExternalStorageDirectory().getParent() + "/sdcard0";
 
     private MediaPlayer mp;
+    private Context mContext;
     //private String songTitle_whatsapp;
 
     private long duration;
@@ -34,8 +38,8 @@ public class SongsManager {
 
     //private ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
     // Constructor
-    public SongsManager() {
-
+    public SongsManager(Context mContext) {
+        this.mContext = mContext;
     }
 
 
@@ -130,11 +134,11 @@ public class SongsManager {
                 }
             }
         }
-        if (songsList.size() < 5) {
+        if (songsList != null & songsList.size() < 5) {
             // Toast.makeText(SongsManager.this, "Congrats entered into force stop", Toast.LENGTH_SHORT).show();
             HashMap<String, String> songMap = new HashMap<String, String>();
-            songMap.put("songTitle", "songTitle");
-            songMap.put("songPath", "songPath");
+           /* songMap.put("songTitle", "songTitle");
+            songMap.put("songPath", "songPath");*/
 
             songsList.add(songMap);
             return songsList;
@@ -157,9 +161,6 @@ public class SongsManager {
                             file.getName().equals("android")) {
                         continue;
                     }
-                    if (file.getName().equalsIgnoreCase("Bluetooth") || file.getName().equalsIgnoreCase("Downloads")) {
-                        System.out.println(file.getName());
-                    }
                     if (file.isDirectory()) {
                         scanDirectory(file);
                     } else {
@@ -173,13 +174,26 @@ public class SongsManager {
 
 
     private void addSongToList(File song) {
-        if (song.getName().endsWith(mp3Pattern)) {
+        if (song.getName().endsWith(mp3Pattern) && isPassedLengthCheck(song)) {
             HashMap<String, String> songMap = new HashMap<String, String>();
             songMap.put("songTitle",
                     song.getName().substring(0, (song.getName().length() - 4)));
             songMap.put("songPath", song.getPath());
             songsList.add(songMap);
         }
+    }
+
+    private boolean isPassedLengthCheck(File song) {
+
+        Uri uri = Uri.parse(song.getAbsolutePath());
+        MediaMetadataRetriever mmr = new MediaMetadataRetriever();
+        mmr.setDataSource(mContext, uri);
+        String durationStr = mmr.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+        int millSecond = Integer.parseInt(durationStr);
+        if (millSecond > 50000) {
+            return true;
+        }
+        return false;
     }
 
 

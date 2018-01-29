@@ -271,7 +271,7 @@ public class ChallengeHardActivity extends Activity implements View.OnClickListe
     public void initialize_player() {
 
         mp = new MediaPlayer();
-        songManager = new SongsManager();
+        songManager = new SongsManager(ChallengeHardActivity.this);
         utils = new Utilities();
         songsList = songManager.getPlayList();
 
@@ -307,10 +307,12 @@ public class ChallengeHardActivity extends Activity implements View.OnClickListe
 
             songsListnew = new ArrayList<HashMap<String, String>>(songsList);
             long duration = 0;
-
-            songs_inbank = songsListnew.size();
-
-            if (songs_inbank == 1) {
+            if (songsListnew != null & songsListnew.size() > 0) {
+                songs_inbank = songsListnew.size();
+            } else {
+                force_stop();
+            }
+            if (songs_inbank < 5) {
                 //Toast.makeText(ChallengeNormalActivity.this, "Congrats entered into force stop", Toast.LENGTH_SHORT).show();
                 //Toast.makeText(ChallengeNormalActivity.this, "Sorry. Your playlist contains no songs. Or your songs are not in the folder 'Music' or 'Bluetooth'", Toast.LENGTH_SHORT).show();
                 force_stop();

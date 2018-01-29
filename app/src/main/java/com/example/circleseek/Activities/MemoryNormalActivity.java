@@ -71,7 +71,7 @@ public class MemoryNormalActivity extends Activity {
         btnPlay = (ImageButton) findViewById(R.id.btnPlay);
 
         media = new MediaPlayer();
-        songManager = new SongsManager();
+        songManager = new SongsManager(MemoryNormalActivity.this);
         utils = new Utilities();
 
 
@@ -145,96 +145,103 @@ public class MemoryNormalActivity extends Activity {
         }
 
         songsListnew = new ArrayList<HashMap<String, String>>(songsList);
-
-        normal_songs_inbank = songsListnew.size();
-        currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
-        int FirstsongIndex = currentSongIndex;
-        songTitle = songsListnew.get(currentSongIndex).get("songTitle");
-        songsListnew.remove(currentSongIndex);
-        mapp = new HashMap<String, String>();
-        mapp.put("constant", variable);
-        mapp.put("songtitle", songTitle);
-        memory_answers.add(mapp);
-
-
-        Log.v("dude check here.memory", "Answers array");
-        for (int i = 0; i < memory_answers.size(); i++) {
-            Log.v("dude check here.memory", "Answers array" + memory_answers.get(i));
-
-        }
-
-        long duration = media.getDuration();
-
-        map = new HashMap<String, String>();
-        map.put("constant", variable);
-        map.put("songtitle", songTitle);
-        options.add(map);
-        memory_song(FirstsongIndex);
-        if (duration >= 30000) {
-            media.seekTo(15000);
+        if (songsListnew != null & songsListnew.size() > 0) {
+            normal_songs_inbank = songsListnew.size();
         } else {
-
+            force_stop();
         }
+        if (normal_songs_inbank < 5) {
 
-        final int t = 0;
+        } else {
+            currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+            int FirstsongIndex = currentSongIndex;
+            songTitle = songsListnew.get(currentSongIndex).get("songTitle");
+            songsListnew.remove(currentSongIndex);
+            mapp = new HashMap<String, String>();
+            mapp.put("constant", variable);
+            mapp.put("songtitle", songTitle);
+            memory_answers.add(mapp);
 
-        cntr_aCounter = new CountDownTimer(12000, 1000) {
-            public void onTick(long millisUntilFinished) {
-                x = t + 1;
+
+            Log.v("dude check here.memory", "Answers array");
+            for (int i = 0; i < memory_answers.size(); i++) {
+                Log.v("dude check here.memory", "Answers array" + memory_answers.get(i));
+
             }
 
-            public void onFinish() {
-                //code fire after finish
-                Log.v("Verify", "Number of onTick: " + x);
+            long duration = media.getDuration();
 
-                function();
-            }
-        };
-        cntr_aCounter.start();
-
-
-        //mp.setProgress(currentPosition);
-        // mHandler.removeCallbacks(mUpdateTimeTask);
-        Log.v("After first", "First song play" + FirstsongIndex);
-
-        currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
-        String songTitle1 = songsListnew.get(currentSongIndex).get("songTitle");
-        songsListnew.remove(currentSongIndex);
-        map = new HashMap<String, String>();
-        map.put("constant", variable);
-        map.put("songtitle", songTitle1);
-        options.add(map);
-        Log.v("After second", "Second song option" + currentSongIndex);
-
-        for (int i = 0; i < songsListnew.size(); i++) {
-            Log.v("Data in songsListnew", "" + songsListnew.get(i));
-
-        }
-
-
-        for (int i = 0; i < options.size(); i++) {
-            Log.v("Data in options", "" + options.get(i));
-
-        }
-
-
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                countDownTimer.start();
-                cntr_aCounter.cancel();
-                media.stop();
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-
-                startActivity(i);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                // Changing button image to play button
-                //btnPlay.setImageResource(R.drawable.btn_stop);
-
+            map = new HashMap<String, String>();
+            map.put("constant", variable);
+            map.put("songtitle", songTitle);
+            options.add(map);
+            memory_song(FirstsongIndex);
+            if (duration >= 30000) {
+                media.seekTo(15000);
+            } else {
 
             }
-        });
+
+            final int t = 0;
+
+            cntr_aCounter = new CountDownTimer(12000, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    x = t + 1;
+                }
+
+                public void onFinish() {
+                    //code fire after finish
+                    Log.v("Verify", "Number of onTick: " + x);
+
+                    function();
+                }
+            };
+            cntr_aCounter.start();
+
+
+            //mp.setProgress(currentPosition);
+            // mHandler.removeCallbacks(mUpdateTimeTask);
+            Log.v("After first", "First song play" + FirstsongIndex);
+
+            currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+            String songTitle1 = songsListnew.get(currentSongIndex).get("songTitle");
+            songsListnew.remove(currentSongIndex);
+            map = new HashMap<String, String>();
+            map.put("constant", variable);
+            map.put("songtitle", songTitle1);
+            options.add(map);
+            Log.v("After second", "Second song option" + currentSongIndex);
+
+            for (int i = 0; i < songsListnew.size(); i++) {
+                Log.v("Data in songsListnew", "" + songsListnew.get(i));
+
+            }
+
+
+            for (int i = 0; i < options.size(); i++) {
+                Log.v("Data in options", "" + options.get(i));
+
+            }
+
+
+            btnPlay.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View arg0) {
+                    countDownTimer.start();
+                    cntr_aCounter.cancel();
+                    media.stop();
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    // Changing button image to play button
+                    //btnPlay.setImageResource(R.drawable.btn_stop);
+
+
+                }
+            });
+        }
 
 
     }
@@ -360,6 +367,18 @@ public class MemoryNormalActivity extends Activity {
             //  cuentaRegresiva.setText(""+millisUntilFinished/1000);
 
         }
+    }
+
+    public void force_stop() {
+
+        countDownTimer.cancel();
+        //cntr_aCounter.cancel();
+
+        Intent i = new Intent(getApplicationContext(), ErrorCatchingActivity.class);
+
+        startActivity(i);
+        overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);
+
     }
 
 }  

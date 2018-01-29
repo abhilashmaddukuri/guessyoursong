@@ -196,7 +196,7 @@ public class PracticeActivity extends Activity {
     public void initialize_player() {
 
         mp = new MediaPlayer();
-        songManager = new SongsManager();
+        songManager = new SongsManager(PracticeActivity.this);
         utils = new Utilities();
         songsList = songManager.getPlayList();
 
@@ -232,117 +232,131 @@ public class PracticeActivity extends Activity {
 
         long duration = mp.getDuration();
 
-        currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
-        int FirstsongIndex = currentSongIndex;
-        String songTitle = songsListnew.get(currentSongIndex).get("songTitle");
-        songsListnew.remove(currentSongIndex);
-        map = new HashMap<String, String>();
-        map.put("constant", variable);
-        map.put("songtitle", songTitle);
-        options.add(map);
-        answer = songTitle;
-        playSong(FirstsongIndex);
-        if (duration >= 30000) {
-            mp.seekTo(15000);
+        if (songsListnew != null && songsListnew.size() < 5) {
+            force_stop();
         } else {
 
-        }
-
-        final int t = 0;
-
-        cntr_aCounter = new CountDownTimer(10000, 1000) {
-            public void onTick(long millisUntilFinished) {
-                x = t + 1;
-            }
-
-            public void onFinish() {
-                //code fire after finish
-                // Log.v("Verify","Number of onTick: "+x);
-                mp.stop();
-                function(song_time, song_interval, btnPlay);
-            }
-        };
-        cntr_aCounter.start();
-
-
-        //mp.setProgress(currentPosition);
-        // mHandler.removeCallbacks(mUpdateTimeTask);
-        // Log.v("After first","First song play"+FirstsongIndex);
-
-        currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
-        String songTitle1 = songsListnew.get(currentSongIndex).get("songTitle");
-        songsListnew.remove(currentSongIndex);
-        map = new HashMap<String, String>();
-        map.put("constant", variable);
-        map.put("songtitle", songTitle1);
-        options.add(map);
-        // Log.v("After second","Second song option"+currentSongIndex);
-
-        for (int i = 0; i < songsListnew.size(); i++) {
-            //Log.v("Data in songsListnew",""+songsListnew.get(i));
-
-        }
-
-        if (songsListnew != null && songsListnew.size() > 1) {
             currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
-        }
-        String songTitle2 = songsListnew.get(currentSongIndex).get("songTitle");
-        songsListnew.remove(currentSongIndex);
-        map = new HashMap<String, String>();
-        map.put("constant", variable);
-        map.put("songtitle", songTitle2);
-        options.add(map);
-
-        currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
-        String songTitle3 = songsListnew.get(currentSongIndex).get("songTitle");
-        songsListnew.remove(currentSongIndex);
-        map = new HashMap<String, String>();
-        map.put("constant", variable);
-        map.put("songtitle", songTitle3);
-        options.add(map);
-
-        //Log.v(" name is ","jgjgjhgjg"+songTitle);
-        //Log.v("song name is1 ","jgjgjhgjg"+songTitle1);
-
-
-        // Log.v("song name is2 ","jgjgjhgjg"+songTitle2);
-
-
-        for (int i = 0; i < options.size(); i++) {
-            //Log.v("Data in options",""+options.get(i));
-
-        }
-
-        option_select(options);
-
-
-        //Log.v("song 3 ","jgjgjhgjg"+songTitle3);
-
-        /**
-         * Play button click event
-         * plays a song and changes button to pause image
-         * pauses a song and changes button to play image
-         * */
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                // check for already playing
-
-                cntr_aCounter.cancel();
-                mp.stop();
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-
-                startActivity(i);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                // Changing button image to play button
-                //btnPlay.setImageResource(R.drawable.btn_stop);
-
+            int FirstsongIndex = currentSongIndex;
+            String songTitle = songsListnew.get(currentSongIndex).get("songTitle");
+            songsListnew.remove(currentSongIndex);
+            map = new HashMap<String, String>();
+            map.put("constant", variable);
+            map.put("songtitle", songTitle);
+            options.add(map);
+            answer = songTitle;
+            playSong(FirstsongIndex);
+            if (duration >= 30000) {
+                mp.seekTo(15000);
+            } else {
 
             }
-        });
+
+            final int t = 0;
+
+            cntr_aCounter = new CountDownTimer(10000, 1000) {
+                public void onTick(long millisUntilFinished) {
+                    x = t + 1;
+                }
+
+                public void onFinish() {
+                    //code fire after finish
+                    // Log.v("Verify","Number of onTick: "+x);
+                    mp.stop();
+                    function(song_time, song_interval, btnPlay);
+                }
+            };
+            cntr_aCounter.start();
 
 
+            //mp.setProgress(currentPosition);
+            // mHandler.removeCallbacks(mUpdateTimeTask);
+            // Log.v("After first","First song play"+FirstsongIndex);
+
+            currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+            String songTitle1 = songsListnew.get(currentSongIndex).get("songTitle");
+            songsListnew.remove(currentSongIndex);
+            map = new HashMap<String, String>();
+            map.put("constant", variable);
+            map.put("songtitle", songTitle1);
+            options.add(map);
+            // Log.v("After second","Second song option"+currentSongIndex);
+
+            for (int i = 0; i < songsListnew.size(); i++) {
+                //Log.v("Data in songsListnew",""+songsListnew.get(i));
+
+            }
+
+            if (songsListnew != null && songsListnew.size() > 1) {
+                currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+            }
+            String songTitle2 = songsListnew.get(currentSongIndex).get("songTitle");
+            songsListnew.remove(currentSongIndex);
+            map = new HashMap<String, String>();
+            map.put("constant", variable);
+            map.put("songtitle", songTitle2);
+            options.add(map);
+
+            currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+            String songTitle3 = songsListnew.get(currentSongIndex).get("songTitle");
+            songsListnew.remove(currentSongIndex);
+            map = new HashMap<String, String>();
+            map.put("constant", variable);
+            map.put("songtitle", songTitle3);
+            options.add(map);
+
+            //Log.v(" name is ","jgjgjhgjg"+songTitle);
+            //Log.v("song name is1 ","jgjgjhgjg"+songTitle1);
+
+
+            // Log.v("song name is2 ","jgjgjhgjg"+songTitle2);
+
+
+            for (int i = 0; i < options.size(); i++) {
+                //Log.v("Data in options",""+options.get(i));
+
+            }
+
+            option_select(options);
+
+
+            //Log.v("song 3 ","jgjgjhgjg"+songTitle3);
+
+            /**
+             * Play button click event
+             * plays a song and changes button to pause image
+             * pauses a song and changes button to play image
+             * */
+            btnPlay.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View arg0) {
+                    // check for already playing
+
+                    cntr_aCounter.cancel();
+                    mp.stop();
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+
+                    startActivity(i);
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                    // Changing button image to play button
+                    //btnPlay.setImageResource(R.drawable.btn_stop);
+
+
+                }
+            });
+        }
+
+
+    }
+
+    public void force_stop() {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        Intent i = new Intent(getApplicationContext(), ErrorCatchingActivity.class);
+        startActivity(i);
+        overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);
     }
 
 

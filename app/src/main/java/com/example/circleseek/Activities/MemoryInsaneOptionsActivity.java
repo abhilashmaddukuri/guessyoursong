@@ -103,7 +103,7 @@ public class MemoryInsaneOptionsActivity extends Activity
 		sampletext.setTypeface(tf_bold);		
 		
 		mem = new MemoryNormalActivity();
-		songManager = new SongsManager();
+		songManager = new SongsManager(MemoryInsaneOptionsActivity.this);
         countDownTimer_minsane = new MyCountDownTimer_minsane(startTime, interval);
 		
         textViewTime = (TextView)findViewById(R.id.textView1); 

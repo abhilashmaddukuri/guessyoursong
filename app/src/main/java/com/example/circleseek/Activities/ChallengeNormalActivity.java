@@ -221,7 +221,7 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
 
     public void initialize_player() {
         mp = new MediaPlayer();
-        songManager = new SongsManager();
+        songManager = new SongsManager(ChallengeNormalActivity.this);
         utils = new Utilities();
         songsList = songManager.getPlayList();
     }
@@ -246,9 +246,12 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
 
             Random randobj = new Random();
             songsListnew = new ArrayList<HashMap<String, String>>(songsList);
-            songs_inbank = songsListnew.size();
-
-            if (songs_inbank == 1) {
+            if (songsListnew != null & songsListnew.size() > 0) {
+                songs_inbank = songsListnew.size();
+            } else {
+                force_stop();
+            }
+            if (songs_inbank < 5) {
                 force_stop();
             } else if (variable_count == 0) {
                 currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
@@ -301,8 +304,9 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
                     //Log.v("Data in songsListnew",""+songsListnew.get(i));
 
                 }
-
-                currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+                if (songsListnew != null && songsListnew.size() > 1) {
+                    currentSongIndex = randobj.nextInt((songsListnew.size() - 1) - 0 + 1) + 0;
+                }
                 String songTitle2 = songsListnew.get(currentSongIndex).get("songTitle");
                 songsListnew.remove(currentSongIndex);
                 map = new HashMap<String, String>();
