@@ -61,6 +61,9 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
     String[] perms = {"android.permission.READ_EXTERNAL_STORAGE", "android.permission.READ_PHONE_STATE"};
     private static final int PERMISSION_REQUEST_CODE = 200;
     private AlertDialog alertDialog = null;
+    int shouldShowDialogCount = 0;
+    int checkPermission = 0;
+    private static int REQUEST_PERMISSION_SETTINGS = 101;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -110,12 +113,17 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         if (isPermissionGranted) {
                             Toast.makeText(mContext, "permission granted" + i, Toast.LENGTH_SHORT).show();
                         } else {
-                            if (shouldShowRequestPermissionRationale(perms[i])) {
-                                showDialogManualAddPermission();
+                            if (!shouldShowRequestPermissionRationale(perms[i])) {
+                                shouldShowDialogCount++;
                             } else {
-                                checkPermission();
+                                checkPermission++;
                             }
                         }
+                    }
+                    if (shouldShowDialogCount > 0) {
+                        showDialogManualAddPermission();
+                    } else if (checkPermission > 0) {
+                        checkPermission();
                     }
                 }
                 break;
@@ -154,22 +162,21 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         i.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                         i.addCategory(Intent.CATEGORY_DEFAULT);
                         i.setData(Uri.parse("package:" + mContext.getPackageName()));
-                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-                        i.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
-                        mContext.startActivity(i);
+                        ((Activity) mContext).startActivityForResult(i, REQUEST_PERMISSION_SETTINGS);
                     }
                 });
 
-        alertDialogBuilder.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+        alertDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 alertDialog.dismiss();
-                checkPermission();
+                finish();
             }
         });
 
+        alertDialogBuilder.setCancelable(false);
         alertDialog = alertDialogBuilder.create();
+        alertDialog.setCancelable(false);
         alertDialog.show();
 
     }
@@ -372,6 +379,8 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                 mGoogleApiClient.connect();
             } else {
             }
+        } else if (requestCode == REQUEST_PERMISSION_SETTINGS) {
+            checkPermission();
         }
     }
 }
