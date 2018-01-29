@@ -389,13 +389,15 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
     public void playSong(int songIndex) {
         // Play song
         try {
-            mp.reset();
-            mp.setDataSource(songsList.get(songIndex).get("songPath"));
-            mp.prepare();
-            mp.start();
-            btnPlay.setImageResource(R.drawable.btn_stop);
+            if (mp != null) {
+                mp.reset();
+                mp.setDataSource(songsList.get(songIndex).get("songPath"));
+                mp.prepare();
+                mp.start();
+                btnPlay.setImageResource(R.drawable.btn_stop);
 
-            updateProgressBar();
+                updateProgressBar();
+            }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         } catch (IllegalStateException e) {

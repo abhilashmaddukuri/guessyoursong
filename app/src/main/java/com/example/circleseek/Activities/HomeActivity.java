@@ -164,8 +164,8 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
         alertDialogBuilder.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                checkPermission();
                 alertDialog.dismiss();
+                checkPermission();
             }
         });
 
