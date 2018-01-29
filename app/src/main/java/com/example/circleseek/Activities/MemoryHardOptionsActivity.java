@@ -26,6 +26,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.circleseek.SongsManager;
+import com.example.circleseek.Utils.SongsCache;
+import com.example.circleseek.Utils.Utilities;
 import com.guessursongs.R;
 
 
@@ -99,12 +101,20 @@ public class MemoryHardOptionsActivity extends Activity {
         sampletext.setTypeface(tf_bold);
 
         mem = new MemoryNormalActivity();
-        songManager = new SongsManager(MemoryHardOptionsActivity.this);
+
+        if (SongsCache.getInstance().getIsSongsServiceCompleted()) {
+            songsList = SongsCache.getInstance().getSongsList();
+        } else {
+            songManager = new SongsManager(MemoryHardOptionsActivity.this);
+            songsList = songManager.getPlayList();
+            SongsCache.getInstance().setIsSongsServiceCompleted(true);
+            SongsCache.getInstance().setSongsList(songsList);
+        }
         countDownTimer = new MyCountDownTimer(startTime, interval);
 
         textViewTime = (TextView) findViewById(R.id.textView1);
         countDownTimer.start();
-        songsList = songManager.getPlayList();
+
 
         //	 memory_highscore = this.getSharedPreferences("best_time", Context.MODE_PRIVATE);
         //	 memory_best = memory_highscore.getLong("memory_highscore", 10000); //10000 is the default value
@@ -200,7 +210,6 @@ public class MemoryHardOptionsActivity extends Activity {
                         mButton1.setBackgroundResource(R.drawable.buttonshape_red);   // set background color for red background
                         memory_flag = 1; // user fails to give correct answer.
                         Log.v("Wrong answer dude", "Wrong");
-                        Log.v("time_left_countDownTimer", "time_completed" + time_completed);
                         Intent i = new Intent(getApplicationContext(), MemoryHardScoreActivity.class);
                         i.putExtra("mhard_time", time_completed);
                         i.putExtra("mhard_flag", memory_flag);
@@ -494,7 +503,6 @@ public class MemoryHardOptionsActivity extends Activity {
                         memory_flag = 1; // user fails to give correct answer.
                         mButton3.setBackgroundResource(R.drawable.buttonshape_red);   // set background color for red background
                         Log.v("Wrong answer dude", "Wrong");
-                        Log.v("time_left_countDownTimer", "time_completed" + time_completed);
                         Intent i = new Intent(getApplicationContext(), MemoryHardScoreActivity.class);
                         i.putExtra("mhard_time", time_completed);
                         i.putExtra("mhard_flag", memory_flag);

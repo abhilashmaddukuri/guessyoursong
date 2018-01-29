@@ -29,6 +29,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.circleseek.Service.SongsCollectionService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.common.ConnectionResult;
@@ -63,6 +64,7 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
     private AlertDialog alertDialog = null;
     int shouldShowDialogCount = 0;
     int checkPermission = 0;
+    int isPermissionGrantedCount = 0;
     private static int REQUEST_PERMISSION_SETTINGS = 101;
 
     @Override
@@ -99,6 +101,11 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
 //        addRunTimePermission();
     }
 
+    private void startSongsService() {
+        Intent songsServiceIntent = new Intent(this, SongsCollectionService.class);
+        startService(songsServiceIntent);
+    }
+
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, perms, PERMISSION_REQUEST_CODE);
     }
@@ -111,6 +118,7 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                     for (int i = 0; i < grantResults.length; i++) {
                         boolean isPermissionGranted = grantResults[i] == PackageManager.PERMISSION_GRANTED;
                         if (isPermissionGranted) {
+                            isPermissionGrantedCount++;
                             Toast.makeText(mContext, "permission granted" + i, Toast.LENGTH_SHORT).show();
                         } else {
                             if (!shouldShowRequestPermissionRationale(perms[i])) {
@@ -124,6 +132,9 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         showDialogManualAddPermission();
                     } else if (checkPermission > 0) {
                         checkPermission();
+                    }
+                    if (isPermissionGrantedCount == 2) {
+                        startSongsService();
                     }
                 }
                 break;
@@ -143,6 +154,8 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                 requestPermission();
             }*/
             requestPermission();
+        } else {
+            startSongsService();
         }
     }
 

@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.circleseek.SongsManager;
+import com.example.circleseek.Utils.SongsCache;
 import com.guessursongs.R;
 
 import java.util.ArrayList;
@@ -97,7 +98,14 @@ public class MemoryInsaneplusOptionsActivity extends Activity {
 
         textViewTime = (TextView) findViewById(R.id.textView1);
         countDownTimer_minsaneplus.start();
-        songsList = songManager.getPlayList();
+        if (SongsCache.getInstance().getIsSongsServiceCompleted()) {
+            songsList = SongsCache.getInstance().getSongsList();
+        } else {
+            songManager = new SongsManager(MemoryInsaneplusOptionsActivity.this);
+            songsList = songManager.getPlayList();
+            SongsCache.getInstance().setIsSongsServiceCompleted(true);
+            SongsCache.getInstance().setSongsList(songsList);
+        }
 
         //	 memory_highscore = this.getSharedPreferences("best_time", Context.MODE_PRIVATE);
         //	 memory_best = memory_highscore.getLong("memory_highscore", 10000); //10000 is the default value

@@ -25,6 +25,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.circleseek.Utils.SongsCache;
 import com.example.circleseek.Views.CircularProgressBar;
 import com.example.circleseek.Views.CircularProgressBar.ProgressAnimationListener;
 import com.example.circleseek.SongsManager;
@@ -221,9 +222,15 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
 
     public void initialize_player() {
         mp = new MediaPlayer();
-        songManager = new SongsManager(ChallengeNormalActivity.this);
-        utils = new Utilities();
-        songsList = songManager.getPlayList();
+        if (SongsCache.getInstance().getIsSongsServiceCompleted()) {
+            songsList = SongsCache.getInstance().getSongsList();
+        } else {
+            songManager = new SongsManager(ChallengeNormalActivity.this);
+            utils = new Utilities();
+            songsList = songManager.getPlayList();
+            SongsCache.getInstance().setIsSongsServiceCompleted(true);
+            SongsCache.getInstance().setSongsList(songsList);
+        }
     }
 
     public void function(long time, long interval, final ImageButton btnPlay) {
@@ -427,7 +434,7 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
             long currentDuration = mp.getCurrentPosition();
 
             // Updating progress bar
-            int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
+            //int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
 
             // Running this thread after 100 milliseconds
             mHandler.postDelayed(this, 100);

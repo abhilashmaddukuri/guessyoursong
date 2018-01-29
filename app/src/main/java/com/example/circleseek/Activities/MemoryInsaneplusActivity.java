@@ -18,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.circleseek.SongsManager;
+import com.example.circleseek.Utils.SongsCache;
 import com.example.circleseek.Utils.Utilities;
 import com.example.circleseek.Views.CircularProgressBar;
 import com.example.circleseek.Views.CircularProgressBar.ProgressAnimationListener;
@@ -141,11 +142,14 @@ public class MemoryInsaneplusActivity extends Activity {
         btnPlay = (ImageButton) findViewById(R.id.btnPlay);
 
         media = new MediaPlayer();
-        songManager = new SongsManager(MemoryInsaneplusActivity.this);
-        utils = new Utilities();
-
-
-        songsList = songManager.getPlayList();
+        if (SongsCache.getInstance().getIsSongsServiceCompleted()) {
+            songsList = SongsCache.getInstance().getSongsList();
+        } else {
+            songManager = new SongsManager(MemoryInsaneplusActivity.this);
+            songsList = songManager.getPlayList();
+            SongsCache.getInstance().setIsSongsServiceCompleted(true);
+            SongsCache.getInstance().setSongsList(songsList);
+        }
 
         countDownTimer = new MyCountDownTimer(startTime, interval);
 
@@ -215,12 +219,12 @@ public class MemoryInsaneplusActivity extends Activity {
         //}
 
         songsListnew = new ArrayList<HashMap<String, String>>(songsList);
-
-
-        insaneplus_songs_inbank = songsListnew.size();
-
-        if (insaneplus_songs_inbank == 1) {
-
+        if (songsListnew != null & songsListnew.size() > 0) {
+            insaneplus_songs_inbank = songsListnew.size();
+        } else {
+            force_stop();
+        }
+        if (insaneplus_songs_inbank < 5) {
             force_stop();
         } else {
 
@@ -414,7 +418,7 @@ public class MemoryInsaneplusActivity extends Activity {
             //   songCurrentDurationLabel.setText(""+utils.milliSecondsToTimer(currentDuration));
 
             // Updating progress bar
-            int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
+            //int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
             //Log.d("Progress", ""+progress);
 
 

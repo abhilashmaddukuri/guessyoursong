@@ -41,6 +41,7 @@ public class Utilities {
      * @param totalDuration
      */
     public int getProgressPercentage(long currentDuration, long totalDuration) {
+
         Double percentage = (double) 0;
 
         long currentSeconds = (int) (currentDuration / 1000);
