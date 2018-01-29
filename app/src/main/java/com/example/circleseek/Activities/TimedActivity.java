@@ -203,7 +203,7 @@ public class TimedActivity extends Activity {
     public void onBackPressed() {
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
         mp.start();
-        Intent i = new Intent(getApplicationContext(), MenuSelectionActivity.class);
+        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(i);
         overridePendingTransition(R.anim.zoom_enter, R.anim.zoom_exit);
     }

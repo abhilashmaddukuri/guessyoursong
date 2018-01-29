@@ -128,9 +128,9 @@ public class PracticeActivity extends Activity {
 		            //Incoming call: Pause music
 		        	cntr_aCounter.cancel();	
 					 mp.stop();
-					 Intent i = new Intent(getApplicationContext(), MenuSelectionActivity.class);
-			
-			           startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+
+                    startActivity(i);
 			           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			
 			
@@ -139,9 +139,9 @@ public class PracticeActivity extends Activity {
 		        } else if(state == TelephonyManager.CALL_STATE_OFFHOOK) {
 		        	cntr_aCounter.cancel();	
 					 mp.stop();
-					 Intent i = new Intent(getApplicationContext(), MenuSelectionActivity.class);
-			
-			           startActivity(i);
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+
+                    startActivity(i);
 			           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			 	//A call is dialing, active or on hold
 		        }
@@ -336,9 +336,9 @@ public class PracticeActivity extends Activity {
 				
 				cntr_aCounter.cancel();	
 				 mp.stop();
-				 Intent i = new Intent(getApplicationContext(), MenuSelectionActivity.class);
-		
-		           startActivity(i);
+                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+
+                startActivity(i);
 		           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 						// Changing button image to play button
 						//btnPlay.setImageResource(R.drawable.btn_stop);
@@ -809,8 +809,8 @@ public class PracticeActivity extends Activity {
 		// mp = null;
 		 MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
 	 	    mp.start();
-		 
-		 Intent i = new Intent(getApplicationContext(), MenuSelectionActivity.class);
+
+        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
 
            startActivity(i);
            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);

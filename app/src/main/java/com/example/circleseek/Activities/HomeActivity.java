@@ -1,7 +1,9 @@
 package com.example.circleseek.Activities;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -12,8 +14,10 @@ import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -56,6 +60,7 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
     private TextView leaderboard_text;
     String[] perms = {"android.permission.READ_EXTERNAL_STORAGE", "android.permission.READ_PHONE_STATE"};
     private static final int PERMISSION_REQUEST_CODE = 200;
+    private AlertDialog alertDialog = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -87,17 +92,12 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
         onClicks();
         loadAds();
 
-        addRunTimePermission();
-    }
-
-    private void addRunTimePermission() {
-        if (!checkPermission()) {
-            requestPermission();
-        }
+        checkPermission();
+//        addRunTimePermission();
     }
 
     private void requestPermission() {
-        ActivityCompat.requestPermissions(this, new String[]{perms[0], perms[1]}, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this, perms, PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -105,27 +105,16 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
         switch (requestCode) {
             case PERMISSION_REQUEST_CODE:
                 if (grantResults.length > 0) {
-                    boolean isReadExternalStorageAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-                    boolean isReadPhoneStateAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-                    if (isReadExternalStorageAccepted && isReadPhoneStateAccepted) {
-                        Toast.makeText(mContext, "All permissions accepted", Toast.LENGTH_SHORT).show();
-                    } else {
-                        /*if (shouldShowRequestPermissionRationale(perms[0])) {
-                            showMessageOKCancel("You need to allow access to both the permissions",
-                                    new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                                requestPermissions(new String[]{ACCESS_FINE_LOCATION, CAMERA},
-                                                        PERMISSION_REQUEST_CODE);
-                                            }
-                                        }
-                                    });
-                            return;
-                        }*/
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                            requestPermissions(new String[]{perms[0], perms[1]},
-                                    PERMISSION_REQUEST_CODE);
+                    for (int i = 0; i < grantResults.length; i++) {
+                        boolean isPermissionGranted = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                        if (isPermissionGranted) {
+                            Toast.makeText(mContext, "permission granted" + i, Toast.LENGTH_SHORT).show();
+                        } else {
+                            if (shouldShowRequestPermissionRationale(perms[i])) {
+                                showDialogManualAddPermission();
+                            } else {
+                                checkPermission();
+                            }
                         }
                     }
                 }
@@ -133,25 +122,56 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
         }
     }
 
-    private boolean checkPermission() {
-        if (Build.VERSION.SDK_INT < 23) {
-            return true;
-        } else {
-            int result = ContextCompat.checkSelfPermission(getApplicationContext(), perms[0]);
-            int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), perms[1]);
 
-            /*if (result != PackageManager.PERMISSION_GRANTED) {
-                if (shouldShowRequestPermissionRationale(perms[0])){
+    private void checkPermission() {
 
-                }
-            }
+        int result = ContextCompat.checkSelfPermission(getApplicationContext(), perms[0]);
+        int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), perms[1]);
 
-            if(result1 != PackageManager.PERMISSION_GRANTED){
-
+        if (result != PackageManager.PERMISSION_GRANTED || result1 != PackageManager.PERMISSION_GRANTED) {
+            /*if (shouldShowRequestPermissionRationale(perms[0]) && shouldShowRequestPermissionRationale(perms[1])) {
+                showDialogManualAddPermission();
+            } else {
+                requestPermission();
             }*/
-
-            return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
+            requestPermission();
         }
+    }
+
+    private void showDialogManualAddPermission() {
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        alertDialogBuilder.setMessage("Guess Your Song requires storage permission and phone state permission to proceed. Please grant the permissions in app settings");
+        alertDialogBuilder.setPositiveButton("Settings",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        if (mContext == null) {
+                            return;
+                        }
+                        final Intent i = new Intent();
+                        i.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        i.addCategory(Intent.CATEGORY_DEFAULT);
+                        i.setData(Uri.parse("package:" + mContext.getPackageName()));
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        i.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+                        mContext.startActivity(i);
+                    }
+                });
+
+        alertDialogBuilder.setNegativeButton("Retry", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                checkPermission();
+                alertDialog.dismiss();
+            }
+        });
+
+        alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+
     }
 
     private void loadAds() {
@@ -319,6 +339,7 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
         mGoogleApiClient.connect();
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
         mp.start();
+//        checkPermission();
     }
 
 
