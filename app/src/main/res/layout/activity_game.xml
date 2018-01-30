@@ -14,6 +14,7 @@
             android:id="@+id/score"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
             android:textColor="#000000"
             android:textSize="30sp" />
 
@@ -22,6 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/score"
+            android:paddingLeft="12dp"
             android:textColor="#df004c"
             android:textSize="15sp" />
     </LinearLayout>

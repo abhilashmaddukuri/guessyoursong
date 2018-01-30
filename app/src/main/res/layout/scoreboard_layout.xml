@@ -212,7 +212,7 @@
     <Button
         android:id="@+id/share"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="37dp"
         android:layout_below="@+id/line_below_bestscore"
         android:layout_marginRight="5dp"
         android:layout_marginTop="35dp"
@@ -226,7 +226,7 @@
     <Button
         android:id="@+id/replay"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="37dp"
         android:layout_below="@+id/line_below_bestscore"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="35dp"
