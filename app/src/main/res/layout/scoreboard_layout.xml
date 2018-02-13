@@ -1,5 +1,4 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:circular="http://schemas.android.com/apk/res/com.example.circleseek.example"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -65,14 +64,10 @@
 
 
         <View
-            android:id="@+id/line"
             android:layout_width="0.50dp"
             android:layout_height="60dp"
             android:layout_marginLeft="50dp"
-
-            android:background="#000000"
-
-            />
+            android:background="#000000" />
 
 
         <RelativeLayout
@@ -153,13 +148,10 @@
 
 
         <View
-            android:id="@+id/line"
             android:layout_width="0.50dp"
             android:layout_height="60dp"
             android:layout_marginLeft="70dp"
-            android:background="#000000"
-
-            />
+            android:background="#000000" />
 
 
         <RelativeLayout

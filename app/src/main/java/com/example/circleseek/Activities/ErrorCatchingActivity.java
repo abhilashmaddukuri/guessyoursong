@@ -41,7 +41,7 @@ public class ErrorCatchingActivity extends Activity {
         heading.setTypeface(tf_bold);
 
         //String desc ="<br/>&#8226;Guess the song played<br/>&#8226;Faster you choose the correct answer, more you get the points<br/>&#8226;Sample txt all the best dude";
-        String desc = "<br/>-Your playlist doesn't contain songs. (or)<br/>-Songs are not present in correct directory (in 'Music'/'Bluetooth' folder). (or)<br/>-Some unknown issue.";
+        String desc = "<br/>-Your playlist doesn't contain songs. (or)<br/>-We couldn't detect your songs. (or)<br/>-Some unknown issue.";
         TextView description = ((TextView) findViewById(R.id.description));
 
         //    TextView description= ((TextView).findViewById(R.id.description));
