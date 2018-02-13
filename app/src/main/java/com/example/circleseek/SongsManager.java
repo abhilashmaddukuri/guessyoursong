@@ -174,7 +174,7 @@ public class SongsManager {
 
 
     private void addSongToList(File song) {
-        if (song.getName().endsWith(mp3Pattern) && isPassedLengthCheck(song)) {
+        if (song.getName().endsWith(mp3Pattern)/* && isPassedLengthCheck(song)*/) {
             HashMap<String, String> songMap = new HashMap<String, String>();
             songMap.put("songTitle",
                     song.getName().substring(0, (song.getName().length() - 4)));
@@ -183,7 +183,7 @@ public class SongsManager {
         }
     }
 
-    private boolean isPassedLengthCheck(File song) {
+    /*private boolean isPassedLengthCheck(File song) {
 
         Uri uri = Uri.parse(song.getAbsolutePath());
         MediaMetadataRetriever mmr = new MediaMetadataRetriever();
@@ -194,7 +194,7 @@ public class SongsManager {
             return true;
         }
         return false;
-    }
+    }*/
 
 
 }

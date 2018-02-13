@@ -260,20 +260,22 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         (ConnectivityManager) getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
 
                 // Check for network connections
-                if (connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTED ||
-                        connec.getNetworkInfo(0).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                        connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTING ||
-                        connec.getNetworkInfo(1).getState() == android.net.NetworkInfo.State.CONNECTED) {
-                    // if connected with internet
-                    if (mGoogleApiClient.isConnected()) {
-                        startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mGoogleApiClient,
-                                "CgkIlai1sPwaEAIQAQ"), 2);
-                    } else {
-                        Toast.makeText(mContext, "Unable to sign in", Toast.LENGTH_SHORT).show();
-                    }
+                if (connec != null) {
+                    if (connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTED ||
+                            connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTING ||
+                            connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTING ||
+                            connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTED) {
+                        // if connected with internet
+                        if (mGoogleApiClient.isConnected()) {
+                            startActivityForResult(Games.Leaderboards.getLeaderboardIntent(mGoogleApiClient,
+                                    "CgkIlai1sPwaEAIQAQ"), 2);
+                        } else {
+                            Toast.makeText(mContext, "Unable to sign in", Toast.LENGTH_SHORT).show();
+                        }
 
-                } else {
-                    Toast.makeText(mContext, "check your internet connection", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(mContext, "check your internet connection", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
