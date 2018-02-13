@@ -391,27 +391,31 @@ public class PracticeActivity extends Activity {
     public void playSong(int songIndex) {
         // Play song
         try {
-            if (mp != null) {
-                mp.reset();
-                mp.setDataSource(songsList.get(songIndex).get("songPath"));
-                mp.prepare();
-                mp.start();
-                // Displaying Song title
-                //	String songTitle = songsList.get(songIndex).get("songTitle");
-                //	songTitleLabel.setText(songTitle);
+            if (songsList != null && songsList.size() > 0) {
+                if (mp != null) {
+                    mp.reset();
+                    mp.setDataSource(songsList.get(songIndex).get("songPath"));
+                    mp.prepare();
+                    mp.start();
+                    // Displaying Song title
+                    //	String songTitle = songsList.get(songIndex).get("songTitle");
+                    //	songTitleLabel.setText(songTitle);
 
-                // Changing Button Image to pause image
-                btnPlay.setImageResource(R.drawable.btn_stop);
+                    // Changing Button Image to pause image
+                    btnPlay.setImageResource(R.drawable.btn_stop);
 
 
-                // Updating progress bar
-                updateProgressBar();
+                    // Updating progress bar
+                    updateProgressBar();
+                }
             }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         } catch (IllegalStateException e) {
             e.printStackTrace();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

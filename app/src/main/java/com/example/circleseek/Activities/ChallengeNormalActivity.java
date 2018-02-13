@@ -430,9 +430,10 @@ public class ChallengeNormalActivity extends Activity implements GoogleApiClient
      */
     private Runnable mUpdateTimeTask = new Runnable() {
         public void run() {
-            long totalDuration = mp.getDuration();
-            long currentDuration = mp.getCurrentPosition();
-
+            if (mp != null) {
+                long totalDuration = mp.getDuration();
+                long currentDuration = mp.getCurrentPosition();
+            }
             // Updating progress bar
             //int progress = (int) (utils.getProgressPercentage(currentDuration, totalDuration));
 
