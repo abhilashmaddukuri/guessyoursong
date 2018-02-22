@@ -1,9 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-   xmlns:circular="http://schemas.android.com/apk/res/com.example.circleseek.example"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.circleseek.CircularSeekBar"
   	android:background="@drawable/background"
      >
     

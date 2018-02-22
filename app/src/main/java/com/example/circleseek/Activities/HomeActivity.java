@@ -119,7 +119,7 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         boolean isPermissionGranted = grantResults[i] == PackageManager.PERMISSION_GRANTED;
                         if (isPermissionGranted) {
                             isPermissionGrantedCount++;
-                            Toast.makeText(mContext, "permission granted" + i, Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(mContext, "permission granted" + i, Toast.LENGTH_SHORT).show();
                         } else {
                             if (!shouldShowRequestPermissionRationale(perms[i])) {
                                 shouldShowDialogCount++;
@@ -339,13 +339,13 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
 
     @Override
     public void onConnectionFailed(ConnectionResult connectionResult) {
-        Toast.makeText(mContext, "Connection failed", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "Connection failed", Toast.LENGTH_SHORT).show();
     }
 
 
     @Override
     public void onConnected(Bundle arg0) {
-        Toast.makeText(mContext, "Connected", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(mContext, "Connected", Toast.LENGTH_SHORT).show();
     }
 
 
