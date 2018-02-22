@@ -260,7 +260,7 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         (ConnectivityManager) getSystemService(getBaseContext().CONNECTIVITY_SERVICE);
 
                 // Check for network connections
-                if (connec != null) {
+                if (connec != null && connec.getActiveNetworkInfo() != null) {
                     if (connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTED ||
                             connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTING ||
                             connec.getActiveNetworkInfo().getState() == android.net.NetworkInfo.State.CONNECTING ||

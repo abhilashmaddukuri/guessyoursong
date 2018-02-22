@@ -235,8 +235,10 @@ public class PracticeActivity extends Activity {
         }
 
         songsListnew = new ArrayList<HashMap<String, String>>(songsList);
-
-        long duration = mp.getDuration();
+        long duration = 0;
+        if (mp != null) {
+            duration = mp.getDuration();
+        }
 
         if (songsListnew != null && songsListnew.size() < 5) {
             force_stop();
@@ -787,15 +789,18 @@ public class PracticeActivity extends Activity {
     public void onBackPressed() {
         // check for already playing
         //countDownTimer.cancel();
+
         cntr_aCounter.cancel();
-        mp.stop();
+        if (mp != null) {
+            mp.stop();
+        }
         // mp.release();
         // mp = null;
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
-        mp.start();
-
+        if (mp != null) {
+            mp.start();
+        }
         Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-
         startActivity(i);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
     }

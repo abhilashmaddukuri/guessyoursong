@@ -192,7 +192,9 @@ public class MemoryHardActivity extends Activity {
         // mp.release();
         // mp = null;
         MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.onclick);
-        mp.start();
+        if (mp != null) {
+            mp.start();
+        }
         Intent i = new Intent(getApplicationContext(), MemoryLevelActivity.class);
 
         startActivity(i);
