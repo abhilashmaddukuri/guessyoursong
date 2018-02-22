@@ -144,6 +144,10 @@ public class MemoryInsaneplusActivity extends Activity {
         media = new MediaPlayer();
         if (SongsCache.getInstance().getIsSongsServiceCompleted()) {
             songsList = SongsCache.getInstance().getSongsList();
+            if (songsList == null && songsList.size() < 5) {
+                Intent i = new Intent(this, ErrorCatchingActivity.class);
+                startActivity(i);
+            }
         } else {
             songManager = new SongsManager(MemoryInsaneplusActivity.this);
             songsList = songManager.getPlayList();

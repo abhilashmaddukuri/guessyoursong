@@ -122,15 +122,15 @@ public class MemoryInsaneplusOptionsActivity extends Activity {
         minsaneplus_songs_inbank = extras.getInt("insaneplus_songs_inbank");
 
         Log.v("memory_options", "Please come here:::" + ruthugod.size());
-        for (int j = 0; j < ruthugod.size(); j++) {
-            Log.v("Memory answers", "Memory answers" + ruthugod.get(j));
-            pattern_one = ruthugod.get(0).get("songtitle");
-            pattern_two = ruthugod.get(1).get("songtitle");
-            pattern_three = ruthugod.get(2).get("songtitle");
-            pattern_four = ruthugod.get(3).get("songtitle");
-            pattern_five = ruthugod.get(4).get("songtitle");
-
+        if (ruthugod != null && ruthugod.size() < 5) {
+            return;
         }
+        pattern_one = ruthugod.get(0).get("songtitle");
+        pattern_two = ruthugod.get(1).get("songtitle");
+        pattern_three = ruthugod.get(2).get("songtitle");
+        pattern_four = ruthugod.get(3).get("songtitle");
+        pattern_five = ruthugod.get(4).get("songtitle");
+
         final ArrayList<HashMap<String, String>> answer_topass = new ArrayList<HashMap<String, String>>(ruthugod);
 
 
