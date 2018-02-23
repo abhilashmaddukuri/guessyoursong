@@ -216,7 +216,9 @@ public class HomeActivity extends Activity implements GoogleApiClient.Connection
                         } catch (Exception e) {
 
                         }
-                        ringProgressDialog.dismiss();
+                        if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+                            ringProgressDialog.dismiss();
+                        }
                     }
                 }).start();
 

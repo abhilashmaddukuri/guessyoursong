@@ -130,7 +130,9 @@ private static ArrayList<HashMap<String, String>> memory_score_answer = new Arra
 			         				} catch (Exception e) {
 
 			         				}
-			         				ringProgressDialog.dismiss();
+									if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+										ringProgressDialog.dismiss();
+									}
 			         			}
 			         		}).start();
 				        	Intent i = new Intent(getApplicationContext(), MemoryInsaneActivity.class);

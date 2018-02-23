@@ -185,7 +185,9 @@ public class ChallengehardScoreboardActivity extends Activity
 		         				} catch (Exception e) {
 
 		         				}
-		         				ringProgressDialog.dismiss();
+								if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+									ringProgressDialog.dismiss();
+								}
 		         			}
 		         		}).start();
 			        	

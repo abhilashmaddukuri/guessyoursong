@@ -76,7 +76,9 @@ public class TimedActivity extends Activity {
                         } catch (Exception e) {
 
                         }
-                        ringProgressDialog.dismiss();
+                        if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+                            ringProgressDialog.dismiss();
+                        }
                     }
                 }).start();
 
@@ -103,7 +105,9 @@ public class TimedActivity extends Activity {
                         } catch (Exception e) {
 
                         }
-                        ringProgressDialog.dismiss();
+                        if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+                            ringProgressDialog.dismiss();
+                        }
                     }
                 }).start();
 
@@ -131,7 +135,9 @@ public class TimedActivity extends Activity {
                         } catch (Exception e) {
 
                         }
-                        ringProgressDialog.dismiss();
+                        if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+                            ringProgressDialog.dismiss();
+                        }
                     }
                 }).start();
 

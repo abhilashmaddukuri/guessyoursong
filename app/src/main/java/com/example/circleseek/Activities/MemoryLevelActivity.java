@@ -90,7 +90,9 @@ public class MemoryLevelActivity extends Activity
 			         				} catch (Exception e) {
 
 			         				}
-			         				ringProgressDialog.dismiss();
+									if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+										ringProgressDialog.dismiss();
+									}
 			         			}
 			         		}).start();
 			            	 
@@ -123,7 +125,9 @@ public class MemoryLevelActivity extends Activity
 			         				} catch (Exception e) {
 
 			         				}
-			         				ringProgressDialog.dismiss();
+									if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+										ringProgressDialog.dismiss();
+									}
 			         			}
 			         		}).start();
 			            	 
@@ -155,7 +159,9 @@ public class MemoryLevelActivity extends Activity
 			         				} catch (Exception e) {
 
 			         				}
-			         				ringProgressDialog.dismiss();
+									if (ringProgressDialog != null && ringProgressDialog.isShowing()) {
+										ringProgressDialog.dismiss();
+									}
 			         			}
 			         		}).start();
 			            	 
